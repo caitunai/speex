@@ -108,7 +108,7 @@ npm test
 npm pack --dry-run
 ```
 
-`npm run build` requires Emscripten only when rebuilding `dist/wasm`. The CI workflow installs Emscripten with `mymindstorm/setup-emsdk`.
+`npm run build` requires Emscripten only when rebuilding `dist/wasm`. The CI workflow installs Emscripten with `emscripten-core/setup-emsdk`.
 
 ## Release
 
@@ -116,8 +116,6 @@ npm pack --dry-run
 2. Commit the changes.
 3. Push a tag matching the npm version, for example `v0.1.0`.
 4. GitHub Actions runs Go tests, rebuilds the browser package, verifies the tag and package versions match, and publishes `@caitun/speex` to npm.
-
-The npm publish job requires an `NPM_TOKEN` repository secret.
 
 ## License
 
