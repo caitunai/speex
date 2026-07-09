@@ -1,0 +1,47 @@
+{
+  "name": "@caitun/speex",
+  "version": "0.1.0",
+  "description": "Browser Speex encoder and decoder powered by Speex WebAssembly.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/caitunai/speex#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitunai/speex.git",
+    "directory": "packages/browser"
+  },
+  "bugs": {
+    "url": "https://github.com/caitunai/speex/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./wasm/speex-wasm.js": "./dist/wasm/speex-wasm.js",
+    "./wasm/speex-wasm.wasm": "./dist/wasm/speex-wasm.wasm"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:js && npm run build:wasm",
+    "build:js": "sh scripts/build-js.sh",
+    "build:wasm": "sh scripts/build-wasm.sh",
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "speex",
+    "codec",
+    "audio",
+    "wasm",
+    "webaudio"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "provenance": true
+  }
+}
