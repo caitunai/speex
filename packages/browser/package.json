@@ -1,6 +1,6 @@
 {
   "name": "@caitun/speex",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Browser Speex encoder and decoder powered by Speex WebAssembly.",
   "type": "module",
   "license": "MIT",
